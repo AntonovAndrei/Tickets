@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickets.Core", "Tickets.Core\Tickets.Core.csproj", "{2A1FAB0A-6BFC-40A8-9F8F-6D55902C5178}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickets.Data", "Tickets.Data\Tickets.Data.csproj", "{45BC2A52-B509-40D1-A546-5F240229B1C4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A1FAB0A-6BFC-40A8-9F8F-6D55902C5178} = {2A1FAB0A-6BFC-40A8-9F8F-6D55902C5178}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
