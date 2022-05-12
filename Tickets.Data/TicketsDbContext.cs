@@ -10,7 +10,7 @@ namespace Tickets.Data
         {
         }
 
-        public DbSet<Segments> Segments { get; set; }
+        public DbSet<Segment> Segments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

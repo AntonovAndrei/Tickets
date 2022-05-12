@@ -2,7 +2,7 @@
 
 namespace Tickets.Core.Entities
 {
-    public class Segments
+    public class Segment
     {
         public int Id { get; set; }
         public bool Is_passed { get; set; }
@@ -23,6 +23,7 @@ namespace Tickets.Core.Entities
         public int Ticket_number { get; set; }
         public int? Ticket_type { get; set; }
 
+        public int? Serial_number { get;set; }
         public string? Airline_code { get; set; }
         public int? Flight_num { get; set; }
         public string? Depart_place { get; set; }
