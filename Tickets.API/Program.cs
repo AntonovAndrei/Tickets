@@ -1,13 +1,15 @@
-using Microsoft.EntityFrameworkCore;
-using Tickets.Data;
+
+
+using Tickets.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<TicketsDbContext>(
-    db => db.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddSingleton<ISegmentRepository, SegmentRepository>();
+/*builder.Services.AddDbContext<TicketsDbContext>(
+    db => db.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));*/
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

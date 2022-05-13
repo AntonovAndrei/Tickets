@@ -1,31 +1,33 @@
-﻿using Tickets.Core.Entities;
+﻿using Microsoft.Extensions.Configuration;
+using Tickets.Core.Entities;
 
 namespace Tickets.Data.Repositories
 {
     public class SegmentRepository : ISegmentRepository
     {
-        private readonly TicketsDbContext _db;
-        public SegmentRepository(TicketsDbContext db)
+        private string _connectionString;
+
+        public SegmentRepository(IConfiguration configuration)
         {
-            _db = db;
+            _connectionString = configuration["ConnectionStrings:DefaultConnection"];
         }
 
-        public int Create(Segment segment)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Delete(int id)
+        public Task<int> CreateAsync(Segment segment)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Segment> GetList()
+        public Task<int> DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public int Refund(Segment segment)
+        public Task<IEnumerable<Segment>> GetListAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> RefundAsync(Segment segment)
         {
             throw new NotImplementedException();
         }

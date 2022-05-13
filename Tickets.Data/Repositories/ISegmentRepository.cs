@@ -4,9 +4,9 @@ namespace Tickets.Data.Repositories
 {
     public interface ISegmentRepository
     {
-        public IEnumerable<Segment> GetList();
-        public int Create(Segment segment);
-        public int Delete(int id);
-        public int Refund(Segment segment);
+        public Task<IEnumerable<Segment>> GetListAsync();
+        public Task<int> CreateAsync(Segment segment);
+        public Task<int> DeleteAsync(int id);
+        public Task<int> RefundAsync(Segment segment);
     }
 }
